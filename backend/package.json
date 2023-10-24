@@ -1,0 +1,13 @@
+{
+    "name": "seilinux-terraform-docker",
+    "version": "1.0.0",
+    "description": "Provisionamento Infraestrutura containerizada com Terraform",
+    "main": "index.js",
+    "type": "module",
+    "author": "SeiLinux IT Solutions",
+    "license": "ISC",
+    "dependencies": {
+        "pg": "^8.11.3",
+        "dotenv": "^16.3.1"
+    }
+}
