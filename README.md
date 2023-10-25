@@ -60,8 +60,3 @@ Se tiver alguma dúvida ou quiser saber mais sobre como essa infraestrutura foi 
 
 
 Aproveite o aprendizado e a exploração!
-
-![Visitantes](https://img.shields.io/github/watchers/bramos013/terraform-docker?label=Visitas&message=Visualiza%C3%A7%C3%B5es%20do%20Reposit%C3%B3rio&color=green)
-
-
-
