@@ -67,30 +67,28 @@
     <p>Abordando conceitos sobre Terraform, Docker e Redes.</p>
     <button onclick="fetchAPI()">Conectar API e Banco</button>
     <script>
-        async function fetchAPI() {
-            const response = await fetch("/api", {
-                mode: 'no-cors'
-            })
-            const result = await response.json();
+      async function fetchAPI() {
+        const result = await fetch("/api", { mode: 'no-cors' })
+          .then(response => response.json())
 
-            if (result.database) {
-                const h2 = document.createElement("h2");
-                h2.innerHTML = "O banco de dados está funcionando";
-                document.body.appendChild(h2);
-            }
-
-            if (result.userAdmin) {
-                const h2 = document.createElement("h2");
-                h2.innerHTML = "Migração executada";
-                document.body.appendChild(h2);
-            }
-
-            if (result.database && result.userAdmin) {
-                const button = document.querySelector("button");
-                button.disabled = true;
-                button.classList.add("disabled");
-            }
+        if (result?.database) {
+          const h2 = document.createElement("h2");
+          h2.innerHTML = "Banco de dados conectado";
+          document.body.appendChild(h2);
         }
+
+        if (result?.userAdmin) {
+          const h2 = document.createElement("h2");
+          h2.innerHTML = "Migrações executadas";
+          document.body.appendChild(h2);
+        }
+
+        if (result?.database && result?.userAdmin) {
+          const button = document.querySelector("button");
+          button.disabled = true;
+          button.classList.add("disabled");
+        }
+      }
     </script>
 </body>
 
