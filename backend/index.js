@@ -38,7 +38,7 @@ http.createServer(async(req, res) => {
 
         const data = {
             database: successfulConnection,
-            userAdmin: result ? .role === "admin"
+            userAdmin: result?.role === "admin"
         }
 
         res.end(JSON.stringify(data));

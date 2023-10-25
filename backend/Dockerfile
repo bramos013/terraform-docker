@@ -1,10 +1,10 @@
-FROM node:18-alpine as build
+FROM node:18-alpine3.18
 LABEL authors="SeiLinux IT Solutions"
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY . ./
 
 RUN npm install
 
-ENTRYPOINT [ "node", "index.js" ]
+ENTRYPOINT ["node", "index.js"]
