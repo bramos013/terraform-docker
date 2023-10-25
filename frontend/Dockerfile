@@ -2,6 +2,6 @@ FROM nginx:latest
 LABEL authors="SeiLinux IT Solutions"
 
 COPY index.html /usr/share/nginx/html/index.html
-COPY conf/seilinux.conf /etc/nginx/conf.d/seilinux.conf
+COPY conf/sample.conf /etc/nginx/conf.d/seilinux.conf
 
 CMD ["nginx", "-g", "daemon off;"]
